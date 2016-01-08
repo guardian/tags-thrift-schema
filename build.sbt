@@ -8,8 +8,6 @@ libraryDependencies ++= Seq(
   "com.twitter" %% "scrooge-core" % "4.2.0"
 )
 
-version := "0.1.0"
-
 // Might cross compile more scala versions here depending on who needs this!
 scalaVersion := "2.11.7"
 
