@@ -65,7 +65,7 @@ struct PublicationInformation {
   1: optional i64 mainNewspaperBookSectionId;
 
   /** Any newspaper books associated with the publication */
-  2: optional list<i64> newspaperBooks;
+  2: required set<i64> newspaperBooks;
 }
 
 
