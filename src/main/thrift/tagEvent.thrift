@@ -1,6 +1,6 @@
 include "tag.thrift"
 
-namespace scala com.gu.tagschema
+namespace scala com.gu.tagmanager
 
 enum EventType {
     UPDATE = 0,

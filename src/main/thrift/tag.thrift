@@ -1,7 +1,7 @@
 include "image.thrift"
 
 
-namespace scala com.gu.tagschema
+namespace scala com.gu.tagmanager
 
 /** the types of tags supported */
 enum TagType {
