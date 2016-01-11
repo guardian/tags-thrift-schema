@@ -1,0 +1,15 @@
+target/
+project/boot/
+
+.idea/
+.idea_modules/
+
+node_modules/
+
+logs/*
+
+.history
+
+public/build
+
+npm-debug.log
