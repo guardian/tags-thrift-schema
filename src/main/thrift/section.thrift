@@ -1,4 +1,4 @@
-namespace scala com.gu.tagmanagement
+namespace scala com.gu.tagschema
 
 struct EditionalisedPage {
 
