@@ -1,4 +1,4 @@
-namespace scala com.gu.tagmanager
+namespace scala com.gu.tagmanagement
 
 struct ImageAsset {
 
