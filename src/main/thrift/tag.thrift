@@ -62,7 +62,7 @@ struct ContributorInformation {
 
 struct PublicationInformation {
   /** The main newpaper book section associated with the publication */
-  1: optional string mainNewspaperBookSectionId;
+  1: optional i64 mainNewspaperBookSectionId;
 
   /** Any newspaper books associated with the publication */
   2: optional list<i64> newspaperBooks;
