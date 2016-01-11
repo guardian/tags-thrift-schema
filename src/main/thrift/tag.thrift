@@ -60,6 +60,14 @@ struct ContributorInformation {
 
 }
 
+struct PublicationInformation {
+  /** The main newpaper book section associated with the publication */
+  1: optional string mainNewspaperBookSectionId;
+
+  /** Any newspaper books associated with the publication */
+  2: optional list<i64> newspaperBooks;
+}
+
 
 struct Reference {
     /** the type of the the reference, e.g. musicbrainz, imdb, pa football team etc. */
@@ -104,19 +112,25 @@ struct Tag {
     /** the id of the section this tag belongs to, if missing the tag is in the 'Global' pseudosection */
     11: optional i64 section;
 
+    /** the id of the publication this tag belongs to, generally used for newspaper_book type tags */
+    12: optional i64 publication;
+
     /** a description of the tag, rendered on tag pages, this could be a topic precis or a contributor's profile */
-    12: optional string description;
+    13: optional string description;
 
     /** a set of parent tag ids. NB a tag can have multiple parents, but more often the set will be empty */
-    13: required set<i64> parents;
+    14: required set<i64> parents;
 
     /** the reference mappings for this tag */
-    14: required list<Reference> references;
+    15: required list<Reference> references;
 
     /** Any Podcast Metadata associated with this tag */
-    15: optional PodcastMetadata podcastMetadata;
+    16: optional PodcastMetadata podcastMetadata;
 
     /** Any Contributor Information associated with this tag */
-    16: optional ContributorInformation contributorInformation;
+    17: optional ContributorInformation contributorInformation;
+
+    /** Any Publication Information associated with this tag (Only for Publication Tags) */
+    18: optional PublicationInformation publicationInformation
 
 }
