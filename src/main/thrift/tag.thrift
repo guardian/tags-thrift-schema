@@ -131,6 +131,6 @@ struct Tag {
     17: optional ContributorInformation contributorInformation;
 
     /** Any Publication Information associated with this tag (Only for Publication Tags) */
-    18: optional PublicationInformation publicationInformation
+    18: optional PublicationInformation publicationInformation;
 
 }
