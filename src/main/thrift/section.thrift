@@ -31,4 +31,10 @@ struct Section {
 
     /** A map of editionalised versions of the section front keyed off the edition, normally empty */
     7: required map<string, EditionalisedPage> editions;
+
+    /** Is this section a microsite section? */
+    8: required bool isMicrosite;
+
+    /** Section page discriminator */
+    9: optional string discriminator
 }
