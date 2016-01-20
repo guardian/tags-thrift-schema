@@ -12,7 +12,8 @@ enum TagType {
     CONTENT_TYPE = 4,
     PUBLICATION = 5,
     NEWSPAPER_BOOK = 6,
-    NEWSPAPER_BOOK_SECTION = 7
+    NEWSPAPER_BOOK_SECTION = 7,
+    BLOG = 8
 }
 
 struct PodcastMetadata {
@@ -132,5 +133,8 @@ struct Tag {
 
     /** Any Publication Information associated with this tag (Only for Publication Tags) */
     18: optional PublicationInformation publicationInformation;
+
+    /** Is this tag a microsite tag? (In a microsite section when migrated) */
+    19: optional bool isMicrosite;
 
 }

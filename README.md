@@ -2,6 +2,17 @@
 
 This repository contains the Thrift schema required for interaction with [guardian/tagmanager](https://github.com/guardian/tagmanager).
 
+#Downloading
+To download you should be able to simply add a dependency similar to the following (with your desired version):
+
+`"com.gu" %% "tags-thrift-schema" % "0.3.4"`
+
+### Note!
+Some people seem to have issues getting the BinTray jcenter repository. In order to get around this you can add the following line to your sbt build.
+
+`resolvers += "Guardian Bintray" at "https://dl.bintray.com/guardian/editorial-tools"`
+
+# Publishing
 ## You will need a Bintray account!
 In order to publish a new version of this schema you'll need a Bintray account.
 
@@ -25,4 +36,3 @@ So you've made some edits and you want to publish a new version of this schema a
 4. Run `sbt publish`
 5. If you setup your Bintray account correctly then this should publish your new version to Bintray!
 6. If for some reason you want to remove your package from Bintray you can run `sbt bintrayUnpublish` which will remove the package *at the current version*.
-
