@@ -135,6 +135,6 @@ struct Tag {
     18: optional PublicationInformation publicationInformation;
 
     /** Is this tag a microsite tag? (In a microsite section when migrated) */
-    19: optional bool isMicrosite;
+    19: required bool isMicrosite;
 
 }
