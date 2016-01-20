@@ -2,6 +2,6 @@ include "tag.thrift"
 
 namespace scala com.gu.tagmanagement
 
-struct PodcastMetadata {
-    1: required list<Tag> tags;
+struct TagReindexBatch {
+    1: required list<tag.Tag> tags;
 }
