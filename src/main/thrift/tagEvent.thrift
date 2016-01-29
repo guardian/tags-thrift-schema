@@ -14,6 +14,6 @@ struct TagEvent {
     /** the tag's id */
     2: required i64 tagId;
 
-    /** the full representation of the tag's state, missing if the tag is deleted */
+    /** the full representation of the tag's state */
     3: optional tag.Tag tag;
 }
