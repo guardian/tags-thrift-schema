@@ -137,4 +137,7 @@ struct Tag {
     /** Is this tag a microsite tag? (In a microsite section when migrated) */
     19: required bool isMicrosite;
 
+    /** CAPI specific field containing their section id */
+    20: optional string capiSectionId;
+
 }
