@@ -76,6 +76,9 @@ struct Reference {
 
     /** the value to the reference */
     2: required string value;
+
+    /** the capi type for this reference, missing value indicates not present in CAPI */
+    3: optional string capiType;
 }
 
 struct Tag {
