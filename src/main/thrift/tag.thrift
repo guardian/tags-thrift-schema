@@ -13,7 +13,8 @@ enum TagType {
     PUBLICATION = 5,
     NEWSPAPER_BOOK = 6,
     NEWSPAPER_BOOK_SECTION = 7,
-    BLOG = 8
+    BLOG = 8,
+    TRACKING = 9
 }
 
 struct PodcastMetadata {
@@ -69,6 +70,10 @@ struct PublicationInformation {
   2: required set<i64> newspaperBooks;
 }
 
+struct TrackingInformation {
+    /** The type of tracking tag that this is, e.g. Comissioning Desk */
+    1: required string trackingType;
+}
 
 struct Reference {
     /** the type of the the reference, e.g. musicbrainz, imdb, pa football team etc. */
@@ -142,5 +147,8 @@ struct Tag {
 
     /** CAPI specific field containing their section id */
     20: optional string capiSectionId;
+
+    /** Any trackinginformation associated with this tag */
+    21: optional TrackingInformation trackingInformation;
 
 }
