@@ -151,4 +151,6 @@ struct Tag {
     /** Any trackinginformation associated with this tag */
     21: optional TrackingInformation trackingInformation;
 
+    /** The time at which this tag was last updated */
+    22: optional i64 updatedAt;
 }
