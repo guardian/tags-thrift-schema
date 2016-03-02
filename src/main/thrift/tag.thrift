@@ -159,6 +159,10 @@ struct Tag {
     /** The currently active sponsorships for this tag */
     23: optional list<sponsorship.Sponsorship> activeSponsorships;
 
+    /** the id of the sponsorship for a paid content tag, for internal use
+    external consumers should only use the activeSponsorships data */
+    25: optional i64 sponsorshipId;
+
     /** is this tag expired - only applies to paid content tags */
-    24: required bool expired;
+    26: required bool expired;
 }

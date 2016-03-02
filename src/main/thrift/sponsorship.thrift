@@ -17,18 +17,22 @@ struct SponsorshipTargeting {
 }
 
 struct Sponsorship {
+
+    /** the id of the sponsorship, this is required internally but is not of use for external systems  */
+    1: required i64 id;
+
     /** the type of the sponsorship */
-    1: required SponsorshipType sponsorshipType;
+    2: required SponsorshipType sponsorshipType;
 
     /** the name of the sponsor */
-    2: required string sponsorName;
+    3: required string sponsorName;
 
     /** the logo to display for the sponsor */
-    3: required image.Image sponsorLogo;
+    4: required image.Image sponsorLogo;
 
     /** the url to link to when clicking the sponsor logo */
-    4: required string sponsorLink;
+    5: required string sponsorLink;
 
     /** targeting information for the sponsorship, always show the sponsorship if this is missing */
-    5: optional SponsorshipTargeting targeting;
+    6: optional SponsorshipTargeting targeting;
 }
