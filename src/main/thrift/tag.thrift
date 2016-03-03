@@ -163,6 +163,6 @@ struct Tag {
     external consumers should only use the activeSponsorships data */
     25: optional i64 sponsorshipId;
 
-    /** is this tag expired - only applies to paid content tags */
+    /** is this tag expired - only set to true on paid content tags */
     26: required bool expired;
 }
