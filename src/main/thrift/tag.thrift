@@ -1,4 +1,5 @@
 include "image.thrift"
+include "sponsorship.thrift"
 
 
 namespace scala com.gu.tagmanagement
@@ -14,7 +15,8 @@ enum TagType {
     NEWSPAPER_BOOK = 6,
     NEWSPAPER_BOOK_SECTION = 7,
     BLOG = 8,
-    TRACKING = 9
+    TRACKING = 9,
+    PAID_CONTENT = 10
 }
 
 struct PodcastMetadata {
@@ -153,4 +155,14 @@ struct Tag {
 
     /** The time at which this tag was last updated */
     22: optional i64 updatedAt;
+
+    /** The currently active sponsorships for this tag */
+    23: optional list<sponsorship.Sponsorship> activeSponsorships;
+
+    /** the id of the sponsorship for a paid content tag, for internal use
+    external consumers should only use the activeSponsorships data */
+    25: optional i64 sponsorshipId;
+
+    /** is this tag expired - only set to true on paid content tags */
+    26: required bool expired;
 }

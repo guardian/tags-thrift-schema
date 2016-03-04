@@ -1,3 +1,5 @@
+include "sponsorship.thrift"
+
 namespace scala com.gu.tagmanagement
 
 struct EditionalisedPage {
@@ -36,5 +38,8 @@ struct Section {
     8: required bool isMicrosite;
 
     /** Section page discriminator */
-    9: optional string discriminator
+    9: optional string discriminator;
+
+    /** The currently active sponsorships for this section */
+    10: optional list<sponsorship.Sponsorship> activeSponsorships;
 }
