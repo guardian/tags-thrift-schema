@@ -73,8 +73,13 @@ struct PublicationInformation {
 }
 
 struct TrackingInformation {
-    /** The type of tracking tag that this is, e.g. Comissioning Desk */
+    /** The type of tracking tag that this is, e.g. Commissioning Desk */
     1: required string trackingType;
+}
+
+struct PaidContentInformation {
+    /** The sub type that this paid content is */
+    1: required string paidContentType;
 }
 
 struct Reference {
@@ -165,4 +170,7 @@ struct Tag {
 
     /** is this tag expired - only set to true on paid content tags */
     26: required bool expired;
+
+    /** Any other paid content data for this tag */
+    27: optional PaidContentInformation paidContentInformation;
 }

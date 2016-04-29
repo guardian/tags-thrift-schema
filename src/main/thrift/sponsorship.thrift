@@ -35,4 +35,8 @@ struct Sponsorship {
 
     /** targeting information for the sponsorship, always show the sponsorship if this is missing */
     6: optional SponsorshipTargeting targeting;
+
+    /** the url of a page that describes the sponsorship deal (occasionally used to describe foundation type deals
+    involving multiple sponsors) */
+    7: optional string aboutLink;
 }
