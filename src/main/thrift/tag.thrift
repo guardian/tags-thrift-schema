@@ -19,30 +19,41 @@ enum TagType {
     PAID_CONTENT = 10
 }
 
+struct PodcastCategory {
+    /** The iTunes main category  **/
+    1: required string main
+    
+    /** The iTunes sub category  **/
+    2: optional string sub
+}
+
 struct PodcastMetadata {
     /** The iTunes link URL **/
-    1: required string linkUrl;
+    1: required string linkUrl
 
     /** The iTunes copyright text **/
-    2: optional string copyrightText;
+    2: optional string copyrightText
 
     /** The iTunes author text **/
-    3: optional string authorText;
+    3: optional string authorText
 
     /** The iTunes url for the podcast **/
-    4: optional string iTunesUrl;
+    4: optional string iTunesUrl
 
     /** Should the podcast appear in iTunes **/
-    5: required bool iTunesBlock;
+    5: required bool iTunesBlock
 
     /** Should the podcast be marked as clean in iTunes **/
-    6: required bool clean;
+    6: required bool clean
 
     /** Should the podcast be marked as explicit in iTunes **/
-    7: required bool explicit;
+    7: required bool explicit
 
     /** iTunes podcast image **/
     8: optional image.Image image
+    
+    /** iTunes category **/
+    9: optional list<PodcastCategory> categories
 
 }
 
