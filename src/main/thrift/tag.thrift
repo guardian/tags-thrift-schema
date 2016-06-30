@@ -91,6 +91,8 @@ struct TrackingInformation {
 struct PaidContentInformation {
     /** The sub type that this paid content is */
     1: required string paidContentType;
+    /** A custom colour used by the campaign in hex format e.g. #FF00FF */
+    2: optional string campaignColour;
 }
 
 struct Reference {
