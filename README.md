@@ -5,7 +5,7 @@ This repository contains the Thrift schema required for interaction with [guardi
 #Downloading
 To download you should be able to simply add a dependency similar to the following (with your desired version):
 
-`"com.gu" %% "tags-thrift-schema" % "0.6.1"`
+`"com.gu" %% "tags-thrift-schema" % "0.6.3"`
 
 ### Note!
 Some people seem to have issues getting the BinTray jcenter repository. In order to get around this you can add the following line to your sbt build.
