@@ -39,4 +39,8 @@ struct Sponsorship {
     /** the url of a page that describes the sponsorship deal (occasionally used to describe foundation type deals
     involving multiple sponsors) */
     7: optional string aboutLink;
+
+    /** an optional logo to be displayed on darker background media pages, if not supplied the standard logo
+    will be displayed on these pages */
+    8: optional image.Image highContrastSponsorLogo;
 }
