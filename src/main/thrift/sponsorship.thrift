@@ -43,4 +43,10 @@ struct Sponsorship {
     /** an optional logo to be displayed on darker background media pages, if not supplied the standard logo
     will be displayed on these pages */
     8: optional image.Image highContrastSponsorLogo;
+
+    /** The date of which the sponsorship is valid from */
+    9: optional i64 validFrom;
+
+    /** The date of which the sponsorship is valid to */
+    10: optional i64 validTo;
 }
