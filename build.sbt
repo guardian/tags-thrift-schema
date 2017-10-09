@@ -9,7 +9,8 @@ libraryDependencies ++= Seq(
 )
 
 // Might cross compile more scala versions here depending on who needs this!
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.3"
+crossScalaVersions := Seq("2.11.11", "2.12.3")
 
 publishMavenStyle := true
 bintrayOrganization := Some("guardian")
