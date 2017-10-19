@@ -55,6 +55,8 @@ struct PodcastMetadata {
     /** iTunes category **/
     9: optional list<PodcastCategory> categories
 
+    10: optional string podcastType
+
 }
 
 struct ContributorInformation {
