@@ -4,7 +4,7 @@ name := "tags-thrift-schema"
 organization := "com.gu"
 
 libraryDependencies ++= Seq(
-  "org.apache.thrift" % "libthrift" % "0.9.3",
+  "org.apache.thrift" % "libthrift" % "0.9.2",
   "com.twitter" %% "scrooge-core" % "4.12.0"
 )
 
