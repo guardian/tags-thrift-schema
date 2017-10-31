@@ -33,6 +33,6 @@ So you've made some edits and you want to publish a new version of this schema a
 1. Make your changes
 2. Bump the version in `version.sbt` (Remember to follow the SemVer guidelines)
 3. Ensure the project still builds.
-4. Run `sbt publish`
+4. Run `sbt '+ publish'`
 5. If you setup your Bintray account correctly then this should publish your new version to Bintray!
 6. If for some reason you want to remove your package from Bintray you can run `sbt bintrayUnpublish` which will remove the package *at the current version*.

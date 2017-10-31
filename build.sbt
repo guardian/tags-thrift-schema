@@ -4,12 +4,13 @@ name := "tags-thrift-schema"
 organization := "com.gu"
 
 libraryDependencies ++= Seq(
-  "org.apache.thrift" % "libthrift" % "0.9.3",
+  "org.apache.thrift" % "libthrift" % "0.9.2",
   "com.twitter" %% "scrooge-core" % "4.12.0"
 )
 
 // Might cross compile more scala versions here depending on who needs this!
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.3"
+crossScalaVersions := Seq("2.11.11", "2.12.3")
 
 publishMavenStyle := true
 bintrayOrganization := Some("guardian")
