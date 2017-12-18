@@ -75,6 +75,12 @@ struct ContributorInformation {
     /** Contact Email for contributors */
     5: optional string contactEmail;
 
+    /** The contributor's first name used for indexing **/
+    6: optional string  firstName;
+
+    /** The contributor's last name used for indexing **/
+    7: optional string lastName;
+
 }
 
 struct PublicationInformation {
