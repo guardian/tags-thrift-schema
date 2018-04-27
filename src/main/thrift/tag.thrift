@@ -16,7 +16,8 @@ enum TagType {
     NEWSPAPER_BOOK_SECTION = 7,
     BLOG = 8,
     TRACKING = 9,
-    PAID_CONTENT = 10
+    PAID_CONTENT = 10,
+    CAMPAIGN = 11
 }
 
 struct PodcastCategory {
@@ -101,6 +102,11 @@ struct PaidContentInformation {
     1: required string paidContentType;
     /** A custom colour used by the campaign in hex format e.g. #FF00FF */
     2: optional string campaignColour;
+}
+
+struct CampaignInformation {
+    /** The type of campaign tag that this is, e.g. Callout */
+    1: required string campaignType;
 }
 
 struct Reference {
@@ -194,4 +200,7 @@ struct Tag {
 
     /** Any other paid content data for this tag */
     27: optional PaidContentInformation paidContentInformation;
+
+    /** Any campaigninformation associated with this tag */
+    28: optional CampaignInformation campaignInformation;
 }
