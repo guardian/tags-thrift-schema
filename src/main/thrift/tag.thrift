@@ -58,6 +58,9 @@ struct PodcastMetadata {
 
     10: optional string podcastType
 
+    /** The Google Podcasts url for the podcast **/
+    11: optional string googlePodcastsUrl
+
 }
 
 struct ContributorInformation {
