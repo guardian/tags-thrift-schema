@@ -207,4 +207,7 @@ struct Tag {
 
     /** Any campaigninformation associated with this tag */
     28: optional CampaignInformation campaignInformation;
+
+    /** Football crest image */
+    29: optional image.Image footballCrest;
 }
