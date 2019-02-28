@@ -20,10 +20,16 @@ enum TagType {
     CAMPAIGN = 11
 }
 
+enum AdBlockingLevel {
+    NONE = 0,
+    SUGGEST = 1,
+    FORCE = 2
+}
+
 struct PodcastCategory {
     /** The iTunes main category  **/
     1: required string main
-    
+
     /** The iTunes sub category  **/
     2: optional string sub
 }
@@ -52,7 +58,7 @@ struct PodcastMetadata {
 
     /** iTunes podcast image **/
     8: optional image.Image image
-    
+
     /** iTunes category **/
     9: optional list<PodcastCategory> categories
 
@@ -210,4 +216,7 @@ struct Tag {
 
     /** Football crest image */
     29: optional image.Image footballCrest;
+
+    /** Ad blocking level used to block ads when a tag is applied to content */
+    30: optional AdBlockingLevel adBlockingLevel;
 }

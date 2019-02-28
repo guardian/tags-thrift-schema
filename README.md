@@ -2,7 +2,7 @@
 
 This repository contains the Thrift schema required for interaction with [guardian/tagmanager](https://github.com/guardian/tagmanager).
 
-#Downloading
+# Downloading
 To download you should be able to simply add a dependency similar to the following (with your desired version):
 
 `"com.gu" %% "tags-thrift-schema" % "0.6.3"`
