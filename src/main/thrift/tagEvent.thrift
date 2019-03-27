@@ -4,7 +4,8 @@ namespace scala com.gu.tagmanagement
 
 enum EventType {
     UPDATE = 0,
-    DELETE = 1
+    DELETE = 1,
+    FANOUTUPDATE = 2
 }
 
 struct TagEvent {
