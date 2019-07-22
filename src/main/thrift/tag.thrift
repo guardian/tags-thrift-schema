@@ -217,9 +217,9 @@ struct Tag {
     /** Football crest image */
     29: optional image.Image footballCrest;
 
-    /** Ad blocking level used to block ads when a tag is applied to content */
+    /** Blocking level used to block ads when a tag is applied to content */
     30: optional BlockingLevel adBlockingLevel;
 
-    /** Ad blocking level used to block ads when a tag is applied to content */
+    /** Blocking level used to block reader revenue asks when a tag is applied to content */
     31: optional BlockingLevel contributionBlockingLevel;
 }
