@@ -20,7 +20,7 @@ enum TagType {
     CAMPAIGN = 11
 }
 
-enum AdBlockingLevel {
+enum BlockingLevel {
     NONE = 0,
     SUGGEST = 1,
     FORCE = 2
@@ -217,6 +217,9 @@ struct Tag {
     /** Football crest image */
     29: optional image.Image footballCrest;
 
-    /** Ad blocking level used to block ads when a tag is applied to content */
-    30: optional AdBlockingLevel adBlockingLevel;
+    /** Blocking level used to block ads when a tag is applied to content */
+    30: optional BlockingLevel adBlockingLevel;
+
+    /** Blocking level used to block reader revenue asks when a tag is applied to content */
+    31: optional BlockingLevel contributionBlockingLevel;
 }
