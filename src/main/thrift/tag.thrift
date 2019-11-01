@@ -68,6 +68,9 @@ struct PodcastMetadata {
     11: optional string googlePodcastsUrl
 
     12: optional string spotifyUrl
+
+    /** Podcast ID provided by Acast, used to customise the stitching process in Acast Flex */
+    13: optional string acastId
 }
 
 struct ContributorInformation {
