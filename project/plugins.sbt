@@ -1,5 +1,4 @@
 // Plugin to actually build the thrift
-addSbtPlugin("com.twitter" %% "scrooge-sbt-plugin" % "19.3.0")
+addSbtPlugin("com.twitter" %% "scrooge-sbt-plugin" % "19.11.0")
+addSbtPlugin("org.foundweekends" % "sbt-bintray" % "0.5.4")
 
-// Used to upload to bintray
-addSbtPlugin("me.lessis" % "bintray-sbt" % "0.3.0")
