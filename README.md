@@ -2,37 +2,28 @@
 
 This repository contains the Thrift schema required for interaction with [guardian/tagmanager](https://github.com/guardian/tagmanager).
 
-# Downloading
+### Downloading
 To download you should be able to simply add a dependency similar to the following (with your desired version):
 
 `"com.gu" %% "tags-thrift-schema" % "0.6.3"`
 
-### Note!
-Some people seem to have issues getting the BinTray jcenter repository. In order to get around this you can add the following line to your sbt build.
+### Testing Locally
 
-`resolvers += "Guardian Bintray" at "https://dl.bintray.com/guardian/editorial-tools"`
+If you need to try out your changes with consumer applications (e.g. `tagmanager`) then...
 
-# Publishing
-## You will need a Bintray account!
-In order to publish a new version of this schema you'll need a Bintray account.
+- Run `+publishLocal` in sbt (note the `+` makes it cross-compile, e.g. `tagmanager` consumes the 2.11 version)
+- Update the version in the consumer application(s) (e.g. https://github.com/guardian/tagmanager/blob/e47465cbbcdf9e3d3312c5c779eb52fe0676ce4a/build.sbt#L29) using the `-SNAPSHOT` version.
 
-1. Go to `bintray.com` and login with your GitHub account.
-2. Someone will need to invite you to The Guardian Bintray org. Ask super nicely and they just might do it. They should also make you an admin.
-3. You will need an API key.
-  1. Go to your profile
-  2. Click the Edit button near your profile name (top left).
-  3. At the bottom of the list on the left will be the API key section containing your key. Keep this key handy for the next step.
-4. Setup your username/API key locally.
-  1. In this project run `sbt bintrayChangeCredentials`
-  2. Enter your username and API key as prompted.
-  3. This will save your creds locally and you shouldn't need to change them unless you refresh your API key.
+### Publishing a new version
 
-## How to publish a new version
-So you've made some edits and you want to publish a new version of this schema as a package to Bintray jcenter...
+1. Follow the instructions for [publishing a new version to Maven Central via Sonatype](https://docs.google.com/document/d/1rNXjoZDqZMsQblOVXPAIIOMWuwUKe3KzTCttuqS7AcY/edit#).
+   This will include (if not already completed for another project):
+    - Creating and publishing a PGP key
+    - Setting up an account on Sonatype and having it added to the `com.gu` group
+    - Storing your Sonatype credentials in your global sbt configuration
+2. Ensure you're on the branch which holds the changes you're ready to release and that these changes have been approved & tested with the application(s) which use this library (using the `-SNAPSHOT` version).
+3. Ensure the project still builds with `sbt compile`
+4. Run `sbt release`. You will be prompted for a 'release version' – which you should set following semantic versioning as either a patch,
+   minor or major version bump. You will also be prompted for a 'next version' – which should be a patch version ahead of your release version
+   and end `-SNAPSHOT`. `version.sbt` will be updated to reflect this 'next version'.
 
-1. Make your changes
-2. Bump the version in `version.sbt` (Remember to follow the SemVer guidelines)
-3. Ensure the project still builds.
-4. Run `sbt '+ publish'`
-5. If you setup your Bintray account correctly then this should publish your new version to Bintray!
-6. If for some reason you want to remove your package from Bintray you can run `sbt bintrayUnpublish` which will remove the package *at the current version*.
