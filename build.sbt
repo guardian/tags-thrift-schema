@@ -20,7 +20,7 @@ releaseCrossBuild := true
 
 resolvers += Resolver.jcenterRepo
 
-licenses += ("Apache-2.0", url("https://github.com/guardian/tags-thrift-schema/blob/master/LICENSE"))
+licenses += ("Apache-2.0", url("https://github.com/guardian/tags-thrift-schema/blob/main/LICENSE"))
 
 releasePublishArtifactsAction := PgpKeys.publishSigned.value
 publishTo := sonatypePublishTo.value
