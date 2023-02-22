@@ -3,6 +3,8 @@ project/boot/
 
 .idea/
 .idea_modules/
+.metals/
+.vscode/
 
 node_modules/
 

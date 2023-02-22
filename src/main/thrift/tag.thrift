@@ -71,6 +71,9 @@ struct PodcastMetadata {
 
     /** Podcast ID provided by Acast, used to customise the stitching process in Acast Flex */
     13: optional string acastId
+
+    /** The Pocket Casts url for the podcast **/
+    14: optional string pocketCastsUrl
 }
 
 struct ContributorInformation {
