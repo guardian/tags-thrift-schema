@@ -8,6 +8,12 @@ enum SponsorshipType {
     PAID_CONTENT = 2
 }
 
+enum SponsorshipPackage {
+    DEFAULT = 0,
+    US = 1,
+    US_EXCLUSIVE = 2
+}
+
 struct SponsorshipTargeting {
     /** only apply the sponsorship after this date */
     1: optional i64 publishedSince;
@@ -49,4 +55,6 @@ struct Sponsorship {
 
     /** The date of which the sponsorship is valid to */
     10: optional i64 validTo;
+
+    11: optional SponsorshipPackage sponsorshipPackage;
 }
