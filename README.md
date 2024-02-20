@@ -14,9 +14,8 @@ If you need to try out your changes with consumer applications (e.g. `tagmanager
 - Run `+publishLocal` in sbt (note the `+` makes it cross-compile, e.g. `tagmanager` consumes the 2.11 version)
 - Update the version in the consumer application(s) (e.g. https://github.com/guardian/tagmanager/blob/e47465cbbcdf9e3d3312c5c779eb52fe0676ce4a/build.sbt#L29) using the `-SNAPSHOT` version.
 
-## Building a release
+# Publishing a new release
 
-This project uses the [`gha-scala-library-release-workflow`](https://github.com/guardian/gha-scala-library-release-workflow)
-to release to Maven Central. To release a new version, execute the
-[Release](https://github.com/guardian/tags-thrift-schema/actions/workflows/release.yml)
-workflow in the Actions tab on GitHub.
+This repo uses [`gha-scala-library-release-workflow`](https://github.com/guardian/gha-scala-library-release-workflow)
+to automate publishing releases (both full & preview releases) - see
+[**Making a Release**](https://github.com/guardian/gha-scala-library-release-workflow/blob/main/docs/making-a-release.md).
