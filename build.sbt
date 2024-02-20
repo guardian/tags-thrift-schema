@@ -19,7 +19,7 @@ releaseCrossBuild := true
 
 resolvers += Resolver.jcenterRepo
 
-licenses += ("Apache-2.0", url("https://github.com/guardian/tags-thrift-schema/blob/main/LICENSE"))
+licenses := Seq(License.Apache2)
 releaseVersion := fromAggregatedAssessedCompatibilityWithLatestRelease().value
 
 releaseProcess := Seq[ReleaseStep](
