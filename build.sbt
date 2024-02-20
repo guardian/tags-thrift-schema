@@ -27,11 +27,8 @@ releaseProcess := Seq[ReleaseStep](
   runClean,
   runTest,
   setReleaseVersion,
-  publishArtifacts,
-  releaseStepCommand("sonatypeReleaseAll"),
   commitReleaseVersion,
   tagRelease,
   setNextVersion,
-  commitNextVersion,
-  pushChanges
+  commitNextVersion
 )
