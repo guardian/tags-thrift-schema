@@ -17,9 +17,8 @@ scalacOptions := Seq(
 )
 releaseCrossBuild := true
 
-resolvers += Resolver.jcenterRepo
-
 licenses := Seq(License.Apache2)
+
 releaseVersion := fromAggregatedAssessedCompatibilityWithLatestRelease().value
 
 releaseProcess := Seq[ReleaseStep](
