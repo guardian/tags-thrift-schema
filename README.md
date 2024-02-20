@@ -1,4 +1,6 @@
-# tags-thrift-schema [![Release](https://github.com/guardian/tags-thrift-schema/actions/workflows/release.yml/badge.svg)](https://github.com/guardian/tags-thrift-schema/actions/workflows/release.yml)
+# tags-thrift-schema
+[![tags-thrift-schema Scala version support](https://index.scala-lang.org/guardian/tags-thrift-schema/tags-thrift-schema/latest-by-scala-version.svg?platform=jvm)](https://index.scala-lang.org/guardian/tags-thrift-schema/tags-thrift-schema)
+[![Release](https://github.com/guardian/tags-thrift-schema/actions/workflows/release.yml/badge.svg)](https://github.com/guardian/tags-thrift-schema/actions/workflows/release.yml)
 
 This repository contains the Thrift schema required for interaction with [guardian/tagmanager](https://github.com/guardian/tagmanager).
 
