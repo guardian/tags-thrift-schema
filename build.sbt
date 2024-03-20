@@ -5,8 +5,8 @@ name := "tags-thrift-schema"
 organization := "com.gu"
 
 libraryDependencies ++= Seq(
-  "org.apache.thrift" % "libthrift" % "0.13.0",
-  "com.twitter" %% "scrooge-core" % "19.11.0"
+  "org.apache.thrift" % "libthrift" % "0.19.0",
+  "com.twitter" %% "scrooge-core" % "23.11.0"
 )
 
 // Might cross compile more scala versions here depending on who needs this!
