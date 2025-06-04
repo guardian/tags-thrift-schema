@@ -74,6 +74,12 @@ struct PodcastMetadata {
 
     /** The Pocket Casts url for the podcast **/
     14: optional string pocketCastsUrl
+
+    /** Whether or not episodic art should be enabled */
+    15: optional bool episodicArtEnabled;
+
+    /** The date from which episodic art should be enabled */
+    16: optional i64 episodicArtEnabledFrom;
 }
 
 struct ContributorInformation {
