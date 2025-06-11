@@ -78,7 +78,7 @@ struct PodcastMetadata {
     /** Whether or not episodic art should be enabled */
     15: optional bool episodicArtworkEnabled;
 
-    /** The date from which episodic art should be enabled */
+    /** The date from which episodic art should be enabled, represented in milliseconds since unix epoch */
     16: optional i64 episodicArtworkEnabledFrom;
 }
 
