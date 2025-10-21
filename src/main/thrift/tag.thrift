@@ -20,6 +20,16 @@ enum TagType {
     CAMPAIGN = 11
 }
 
+/** the types of keywords supported */
+enum KeywordType {
+    PERSON = 0,
+    ORGANISATION = 1,
+    EVENT = 2,
+    WORK_OF_ART_OR_PRODUCT = 3,
+    PLACE = 4,
+    OTHER = 5
+}
+
 enum BlockingLevel {
     NONE = 0,
     SUGGEST = 1,
@@ -234,4 +244,7 @@ struct Tag {
 
     /** Blocking level used to block reader revenue asks when a tag is applied to content */
     31: optional BlockingLevel contributionBlockingLevel;
+
+    /** Keyword tags types */
+    32: optional KeywordType keywordType;
 }
