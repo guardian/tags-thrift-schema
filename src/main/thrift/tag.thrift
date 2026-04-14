@@ -248,6 +248,6 @@ struct Tag {
     /** Keyword tags types */
     32: optional KeywordType keywordType;
 
-    /** the tag is not presented to users to be added to content in the tooling if deprecated is true */
+    /** Used to determine if a tag can be added to content, if true it should not be presented to users in the tooling */
     33: optional bool deprecated;
 }
