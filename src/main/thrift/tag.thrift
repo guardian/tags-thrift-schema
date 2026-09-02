@@ -17,7 +17,8 @@ enum TagType {
     BLOG = 8,
     TRACKING = 9,
     PAID_CONTENT = 10,
-    CAMPAIGN = 11
+    CAMPAIGN = 11,
+    COMMERCIAL = 12
 }
 
 /** the types of keywords supported */
@@ -141,6 +142,25 @@ struct CampaignInformation {
     1: required string campaignType;
 }
 
+struct IABTaxonomyInformation {
+    /** The tag ID within the given IAB taxonomy */
+    1: required string tagId;
+
+    /** The ID of the IAB taxonomy. See https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/main/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies */
+    2: required string taxonomyCode;
+
+    /** The ID of the data science model used to assign the tag */
+    3: optional string modelId;
+}
+
+struct CommercialInformation {
+    /** The type of commercial tag that this is, e.g. iab-taxonomy */
+    1: required string commercialType;
+    
+    /** IAB taxonomy data */
+    2: optional IABTaxonomyInformation iabTaxonomyInformation
+}
+
 struct Reference {
     /** the type of the the reference, e.g. musicbrainz, imdb, pa football team etc. */
     1: required string type;
@@ -254,4 +274,7 @@ struct Tag {
      * tag to content.
      */
     33: optional bool deprecated;
+
+    /** Any commercial information associated with this tag */
+    34: optional CommercialInformation commercialInformation;
 }
