@@ -6,6 +6,8 @@ organization := "com.gu"
 
 libraryDependencies ++= Seq(
   "org.apache.thrift" % "libthrift" % "0.25.0",
+  // Preserve Thrift HTTP transport; this client selects patched core5/core5-h2 5.4.3.
+  "org.apache.httpcomponents.client5" % "httpclient5" % "5.6.3",
   "com.twitter" %% "scrooge-core" % "23.11.0"
 )
 
